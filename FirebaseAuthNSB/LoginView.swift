@@ -89,6 +89,8 @@ class LoginView: UIView {
         
         button.setAnchor(width: 0, height: 50)
         
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        
         return button
     }()
     
@@ -104,6 +106,8 @@ class LoginView: UIView {
         
         button.setAnchor(width: 0, height: 50)
         
+        button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
+        
         return button
     }()
     
@@ -118,5 +122,7 @@ class LoginView: UIView {
         
         return stackView
     }
+    
+    
     
 }
