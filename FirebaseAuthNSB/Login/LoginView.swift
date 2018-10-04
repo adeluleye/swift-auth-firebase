@@ -24,7 +24,10 @@ class LoginView: UIView {
     }
     
     func setup() {
-        let stackView = mainStackView()
+        let stackView = createStackView(views: [emailTextField,
+                                passwordTextField,
+                                loginButton,
+                                signupButton])
         
         addSubview(backgroundImageView)
         addSubview(stackView)
@@ -70,18 +73,6 @@ class LoginView: UIView {
         
         return button
     }()
-    
-    func mainStackView() -> UIStackView {
-        let stackView = UIStackView(arrangedSubviews: [emailTextField,
-                                                       passwordTextField,
-                                                       loginButton,
-                                                       signupButton])
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 10
-        
-        return stackView
-    }
     
     @objc func handleLogin() {
         loginAction?()
