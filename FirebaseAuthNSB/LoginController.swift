@@ -28,7 +28,7 @@ class LoginController: UIViewController {
         let mainView = LoginView(frame: self.view.frame)
         self.loginView = mainView
         self.view.addSubview(loginView)
-        loginView.anchors(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
+        loginView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
     }
 
 

@@ -21,7 +21,7 @@ class LoginView: UIView {
     
     func setup() {
         addSubview(backgroundImageView)
-        backgroundImageView.anchors(top: self.topAnchor, topPad: 0, bottom: self.bottomAnchor, bottomPad: 0, left: self.leftAnchor, leftPad: 0, right: self.rightAnchor, rightPad: 0, height: 0, width: 0)
+        backgroundImageView.setAnchor(top: self.topAnchor, topPad: 0, bottom: self.bottomAnchor, bottomPad: 0, left: self.leftAnchor, leftPad: 0, right: self.rightAnchor, rightPad: 0, height: 0, width: 0)
     }
     
     let backgroundImageView: UIImageView = {
@@ -43,6 +43,7 @@ class LoginView: UIView {
         var placeholder = NSMutableAttributedString()
         placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
         textField.attributedPlaceholder = placeholder
+        textField.setAnchor(width: 0, height: 40)
         
         return textField
     }()
