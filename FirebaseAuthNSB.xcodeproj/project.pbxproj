@@ -15,6 +15,7 @@
 		E9BDFC6221665F9900C51035 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6121665F9900C51035 /* Extensions.swift */; };
 		E9BDFC672166BA2100C51035 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC662166BA2100C51035 /* UITextField+Extension.swift */; };
 		E9BDFC692166BEE100C51035 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC682166BEE100C51035 /* UIColor+Extension.swift */; };
+		E9BDFC6B2166C16500C51035 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E9BDFC6121665F9900C51035 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E9BDFC662166BA2100C51035 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		E9BDFC682166BEE100C51035 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				E9BDFC6121665F9900C51035 /* Extensions.swift */,
 				E9BDFC662166BA2100C51035 /* UITextField+Extension.swift */,
 				E9BDFC682166BEE100C51035 /* UIColor+Extension.swift */,
+				E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				E9BDFC692166BEE100C51035 /* UIColor+Extension.swift in Sources */,
 				E9BDFC4E216659A200C51035 /* AppDelegate.swift in Sources */,
 				E9BDFC6221665F9900C51035 /* Extensions.swift in Sources */,
+				E9BDFC6B2166C16500C51035 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

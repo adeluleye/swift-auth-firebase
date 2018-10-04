@@ -56,16 +56,7 @@ class LoginView: UIView {
     }()
     
     let loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "Login", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor.white]))
-        button.setAttributedTitle(attributedString, for: .normal)
-        
-        button.layer.cornerRadius = 5
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.greenBorderColor.cgColor
-        
-        button.setAnchor(width: 0, height: 50)
+        let button = UIButton(type: .system, title: "Login", borderColor: UIColor.greenBorderColor)
         
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         
@@ -73,16 +64,7 @@ class LoginView: UIView {
     }()
     
     let signupButton: UIButton = {
-        let button = UIButton(type: .system)
-        
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor.white]))
-        button.setAttributedTitle(attributedString, for: .normal)
-        
-        button.layer.cornerRadius = 5
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.redBorderColor.cgColor
-        
-        button.setAnchor(width: 0, height: 50)
+        let button = UIButton(type: .system, title: "Sign Up", borderColor: UIColor.redBorderColor)
         
         button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         
