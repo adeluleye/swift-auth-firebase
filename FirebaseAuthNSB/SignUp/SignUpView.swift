@@ -60,4 +60,14 @@ class SignUpView: UIView {
         return textField
     }()
     
+    let submitButton: UIButton = {
+        let button = UIButton(type: .system, title: "Submit", borderColor: .greenBorderColor)
+        return button
+    }()
+    
+    let cancelButton: UIButton = {
+        let button = UIButton(type: .system, title: "Cancel", borderColor: .redBorderColor)
+        return button
+    }()
+    
 }
