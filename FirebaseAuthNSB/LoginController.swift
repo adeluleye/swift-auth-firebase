@@ -27,8 +27,18 @@ class LoginController: UIViewController {
     func setupView() {
         let mainView = LoginView(frame: self.view.frame)
         self.loginView = mainView
+        self.loginView.loginAction = loginPressed
+        self.loginView.signupAction = signupPressed
         self.view.addSubview(loginView)
         loginView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
+    }
+    
+    func loginPressed() {
+        print("Login button pressed")
+    }
+    
+    func signupPressed() {
+        print("Signup button pressed")
     }
 
 
