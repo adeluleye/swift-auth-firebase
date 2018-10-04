@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E95673D12166C9CC00D8D527 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95673D02166C9CC00D8D527 /* SignUpController.swift */; };
 		E9BDFC4E216659A200C51035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC4D216659A200C51035 /* AppDelegate.swift */; };
 		E9BDFC50216659A200C51035 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC4F216659A200C51035 /* LoginController.swift */; };
 		E9BDFC55216659A300C51035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BDFC54216659A300C51035 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E95673D02166C9CC00D8D527 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E9BDFC4A216659A200C51035 /* FirebaseAuthNSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthNSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BDFC4D216659A200C51035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BDFC4F216659A200C51035 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E95673CF2166C93400D8D527 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				E95673D02166C9CC00D8D527 /* SignUpController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		E9BDFC41216659A200C51035 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +77,10 @@
 		E9BDFC4C216659A200C51035 /* FirebaseAuthNSB */ = {
 			isa = PBXGroup;
 			children = (
-				E9BDFC642166B97E00C51035 /* Extensions */,
 				E9BDFC632166B8ED00C51035 /* Supporting Files */,
+				E9BDFC642166B97E00C51035 /* Extensions */,
 				E9BDFC652166B99A00C51035 /* Login */,
+				E95673CF2166C93400D8D527 /* SignUp */,
 			);
 			path = FirebaseAuthNSB;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 			files = (
 				E9BDFC672166BA2100C51035 /* UITextField+Extension.swift in Sources */,
 				E9BDFC6021665BFA00C51035 /* LoginView.swift in Sources */,
+				E95673D12166C9CC00D8D527 /* SignUpController.swift in Sources */,
 				E9BDFC50216659A200C51035 /* LoginController.swift in Sources */,
 				E9BDFC692166BEE100C51035 /* UIColor+Extension.swift in Sources */,
 				E9BDFC4E216659A200C51035 /* AppDelegate.swift in Sources */,
