@@ -31,4 +31,20 @@ class LoginView: UIView {
         return imageView
     }()
     
+    let emailTextField: UITextField = {
+        let textField = UITextField()
+        
+        textField.layer.cornerRadius = 5
+        textField.textColor = UIColor.rgb(r: 255, g: 255, b: 255, a: 0.8)
+        textField.backgroundColor = UIColor.rgb(r: 216, g: 216, b: 216, a: 0.2)
+        textField.font = UIFont.systemFont(ofSize: 17)
+        textField.autocorrectionType = .no
+        // placeholder
+        var placeholder = NSMutableAttributedString()
+        placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
+        textField.attributedPlaceholder = placeholder
+        
+        return textField
+    }()
+    
 }
