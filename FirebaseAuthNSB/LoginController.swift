@@ -9,11 +9,20 @@
 import UIKit
 
 class LoginController: UIViewController {
+    
+    var loginView: LoginView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        setupView()
+    }
+    
+    func setupView() {
+        let mainView = LoginView(frame: self.view.frame)
+        self.loginView = mainView
+        self.view.addSubview(loginView)
     }
 
 
