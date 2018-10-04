@@ -32,4 +32,10 @@ class SignUpView: UIView {
         return imageView
     }()
     
+    let nameTextField: UITextField = {
+        let textField = UITextField(placeHolder: "Name")
+        
+        return textField
+    }()
+    
 }
