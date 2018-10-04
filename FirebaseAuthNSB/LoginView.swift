@@ -53,6 +53,7 @@ class LoginView: UIView {
         placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
         textField.attributedPlaceholder = placeholder
         textField.setAnchor(width: 0, height: 40)
+        textField.setLeftPaddingPoints(20)
         
         return textField
     }()
@@ -71,6 +72,7 @@ class LoginView: UIView {
         placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
         textField.attributedPlaceholder = placeholder
         textField.setAnchor(width: 0, height: 40)
+        textField.setLeftPaddingPoints(20)
         
         return textField
     }()
