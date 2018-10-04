@@ -10,8 +10,17 @@ import UIKit
 
 class SignUpController: UIViewController {
     
+    var signUpView: SignUpView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        
+        setupView()
+    }
+    
+    func setupView() {
+        let signUpView = SignUpView(frame: self.view.frame)
+        self.signUpView = signUpView
+        self.view.addSubview(signUpView)
     }
 }
