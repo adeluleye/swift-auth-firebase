@@ -44,4 +44,20 @@ class SignUpView: UIView {
         return textField
     }()
     
+    let passwordTextField: UITextField = {
+        let textField = UITextField(placeHolder: "Password")
+        
+        textField.isSecureTextEntry = true
+        
+        return textField
+    }()
+    
+    let confirmPasswordTextField: UITextField = {
+        let textField = UITextField(placeHolder: "Confirm Password")
+        
+        textField.isSecureTextEntry = true
+        
+        return textField
+    }()
+    
 }
