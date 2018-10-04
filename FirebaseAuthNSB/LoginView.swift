@@ -34,8 +34,9 @@ class LoginView: UIView {
     let emailTextField: UITextField = {
         let textField = UITextField()
         
+        textField.borderStyle = .none
         textField.layer.cornerRadius = 5
-        textField.textColor = UIColor.rgb(r: 255, g: 255, b: 255, a: 0.8)
+        textField.textColor = UIColor(white: 0.9, alpha: 0.8)
         textField.backgroundColor = UIColor.rgb(r: 216, g: 216, b: 216, a: 0.2)
         textField.font = UIFont.systemFont(ofSize: 17)
         textField.autocorrectionType = .no
@@ -46,6 +47,54 @@ class LoginView: UIView {
         textField.setAnchor(width: 0, height: 40)
         
         return textField
+    }()
+    
+    let passwordTextField: UITextField = {
+        let textField = UITextField()
+        
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 5
+        textField.textColor = UIColor(white: 0.9, alpha: 0.8)
+        textField.backgroundColor = UIColor.rgb(r: 216, g: 216, b: 216, a: 0.2)
+        textField.font = UIFont.systemFont(ofSize: 17)
+        textField.autocorrectionType = .no
+        // placeholder
+        var placeholder = NSMutableAttributedString()
+        placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
+        textField.attributedPlaceholder = placeholder
+        textField.setAnchor(width: 0, height: 40)
+        
+        return textField
+    }()
+    
+    let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "Login", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor.white]))
+        button.setAttributedTitle(attributedString, for: .normal)
+        
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.rgb(r: 80, g: 227, b: 194, a: 1).cgColor
+        
+        button.setAnchor(width: 0, height: 50)
+        
+        return button
+    }()
+    
+    let signupButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor.white]))
+        button.setAttributedTitle(attributedString, for: .normal)
+        
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.rgb(r: 255, g: 151, b: 164, a: 1).cgColor
+        
+        button.setAnchor(width: 0, height: 50)
+        
+        return button
     }()
     
 }
