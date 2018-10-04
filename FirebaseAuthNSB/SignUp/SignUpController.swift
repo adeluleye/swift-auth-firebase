@@ -12,10 +12,16 @@ class SignUpController: UIViewController {
     
     var signUpView: SignUpView!
     
+    var darkMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return darkMode ? .default : .lightContent
     }
     
     func setupView() {

@@ -11,17 +11,23 @@ import UIKit
 class LoginController: UIViewController {
     
     var loginView: LoginView!
+    
+    var darkMode = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
         setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return darkMode ? .default : .lightContent
     }
     
     func setupView() {
