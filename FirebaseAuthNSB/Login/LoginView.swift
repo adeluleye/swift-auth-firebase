@@ -50,20 +50,7 @@ class LoginView: UIView {
     }()
     
     let passwordTextField: UITextField = {
-        let textField = UITextField()
-        
-        textField.borderStyle = .none
-        textField.layer.cornerRadius = 5
-        textField.textColor = UIColor(white: 0.9, alpha: 0.8)
-        textField.backgroundColor = UIColor.rgb(r: 216, g: 216, b: 216, a: 0.2)
-        textField.font = UIFont.systemFont(ofSize: 17)
-        textField.autocorrectionType = .no
-        // placeholder
-        var placeholder = NSMutableAttributedString()
-        placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
-        textField.attributedPlaceholder = placeholder
-        textField.setAnchor(width: 0, height: 40)
-        textField.setLeftPaddingPoints(20)
+        let textField = UITextField(placeHolder: "Password")
         
         return textField
     }()
