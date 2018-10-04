@@ -38,4 +38,10 @@ class SignUpView: UIView {
         return textField
     }()
     
+    let emailTextField: UITextField = {
+        let textField = UITextField(placeHolder: "Email")
+        
+        return textField
+    }()
+    
 }
