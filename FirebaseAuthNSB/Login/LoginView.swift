@@ -63,7 +63,7 @@ class LoginView: UIView {
         
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.rgb(r: 80, g: 227, b: 194, a: 1).cgColor
+        button.layer.borderColor = UIColor.greenBorderColor.cgColor
         
         button.setAnchor(width: 0, height: 50)
         
@@ -80,7 +80,7 @@ class LoginView: UIView {
         
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.rgb(r: 255, g: 151, b: 164, a: 1).cgColor
+        button.layer.borderColor = UIColor.redBorderColor.cgColor
         
         button.setAnchor(width: 0, height: 50)
         
