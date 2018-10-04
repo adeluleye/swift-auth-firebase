@@ -19,6 +19,11 @@ class LoginController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     func setupView() {
         let mainView = LoginView(frame: self.view.frame)
         self.loginView = mainView
