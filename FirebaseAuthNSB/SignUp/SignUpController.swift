@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpController: UIViewController {
     
@@ -35,7 +36,26 @@ class SignUpController: UIViewController {
     }
     
     func submitPressed() {
-        print("Submit button pressed")
+        // unwrap using guard statement because the values are optional
+        guard let email = signUpView.emailTextField.text else { return }
+        guard let password = signUpView.emailTextField.text else { return }
+        
+        // implement user creation
+        Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+            
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                // uid is optional, therefore unwrap
+                guard let uid = result?.user.uid else { return }
+                print("User account created successfully", uid)
+                
+                // dismiss the control after account signup
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+        
     }
     
     func cancelPressed() {
