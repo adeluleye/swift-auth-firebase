@@ -39,6 +39,6 @@ class SignUpController: UIViewController {
     }
     
     func cancelPressed() {
-        print("Cancel button pressed")
+        dismiss(animated: true, completion: nil)
     }
 }
