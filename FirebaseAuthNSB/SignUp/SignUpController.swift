@@ -27,6 +27,18 @@ class SignUpController: UIViewController {
     func setupView() {
         let signUpView = SignUpView(frame: self.view.frame)
         self.signUpView = signUpView
+        
+        self.signUpView.submitAction = submitPressed
+        self.signUpView.cancelAction = cancelPressed
+        
         self.view.addSubview(signUpView)
+    }
+    
+    func submitPressed() {
+        print("Submit button pressed")
+    }
+    
+    func cancelPressed() {
+        print("Cancel button pressed")
     }
 }

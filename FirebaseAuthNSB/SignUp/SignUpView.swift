@@ -10,6 +10,9 @@ import UIKit
 
 class SignUpView: UIView {
     
+    var submitAction: (() -> Void)?
+    var cancelAction: (() -> Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -74,12 +77,26 @@ class SignUpView: UIView {
     
     let submitButton: UIButton = {
         let button = UIButton(type: .system, title: "Submit", borderColor: .greenBorderColor)
+        
+        button.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
+        
         return button
     }()
     
     let cancelButton: UIButton = {
         let button = UIButton(type: .system, title: "Cancel", borderColor: .redBorderColor)
+        
+        button.addTarget(self, action: #selector(handleCancel), for: .touchUpInside)
+        
         return button
     }()
+    
+    @objc func handleSubmit() {
+        submitAction?()
+    }
+    
+    @objc func handleCancel() {
+        cancelAction?()
+    }
     
 }
