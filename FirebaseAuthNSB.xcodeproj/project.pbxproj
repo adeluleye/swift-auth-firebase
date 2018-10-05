@@ -60,6 +60,18 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		E95673D42166E61900D8D527 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9BDFC6121665F9900C51035 /* Extensions.swift */,
+				E9BDFC662166BA2100C51035 /* UITextField+Extension.swift */,
+				E9BDFC682166BEE100C51035 /* UIColor+Extension.swift */,
+				E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */,
+				E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E9BDFC41216659A200C51035 = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E9BDFC632166B8ED00C51035 /* Supporting Files */,
-				E9BDFC642166B97E00C51035 /* Extensions */,
+				E95673D42166E61900D8D527 /* Extensions */,
 				E9BDFC652166B99A00C51035 /* Login */,
 				E95673CF2166C93400D8D527 /* SignUp */,
 			);
@@ -97,18 +109,6 @@
 				E9BDFC56216659A300C51035 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E9BDFC642166B97E00C51035 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E9BDFC6121665F9900C51035 /* Extensions.swift */,
-				E9BDFC662166BA2100C51035 /* UITextField+Extension.swift */,
-				E9BDFC682166BEE100C51035 /* UIColor+Extension.swift */,
-				E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */,
-				E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		E9BDFC652166B99A00C51035 /* Login */ = {
