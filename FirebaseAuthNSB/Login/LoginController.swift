@@ -14,8 +14,6 @@ class LoginController: UIViewController {
     var loginView: LoginView!
     
     var darkMode = false
-    
-    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,20 +44,18 @@ class LoginController: UIViewController {
         guard let email = loginView.emailTextField.text else { return }
         guard let password = loginView.passwordTextField.text else { return }
         
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            
-            if let err = error {
-                print(err.localizedDescription)
+        FirebaseAPI.shared.logIn(email: email, password: password) { [weak self] (err) in
+            if err != nil {
+                // show error alert
             } else {
-                guard let uid = user?.user.uid else { return }
-                self.defaults.set(true, forKey: "UserIsLoggedIn")
-                print("User: \(uid) signed in!")
-                
-                // show main controller
-                let mainController = UINavigationController(rootViewController: MainController())
-                self.present(mainController, animated: true, completion: nil)
+                self?.showMainController()
             }
         }
+    }
+    
+    func showMainController() {
+        let mainController = UINavigationController(rootViewController: MainController())
+        self.present(mainController, animated: true, completion: nil)
     }
     
     func signupPressed() {
