@@ -15,6 +15,8 @@ class SignUpController: UIViewController {
     
     var darkMode = false
     
+    var defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,7 @@ class SignUpController: UIViewController {
     func submitPressed() {
         // unwrap using guard statement because the values are optional
         guard let email = signUpView.emailTextField.text else { return }
-        guard let password = signUpView.emailTextField.text else { return }
+        guard let password = signUpView.passwordTextField.text else { return }
         
         // implement user creation
         Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -48,6 +50,7 @@ class SignUpController: UIViewController {
             } else {
                 // uid is optional, therefore unwrap
                 guard let uid = result?.user.uid else { return }
+                self.defaults.set(false, forKey: "UserIsLoggedIn")
                 print("User account created successfully", uid)
                 
                 // dismiss the control after account signup

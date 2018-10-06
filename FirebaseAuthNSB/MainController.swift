@@ -11,6 +11,9 @@ import Firebase
 
 class MainController: UIViewController {
     
+    // save state
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +27,7 @@ class MainController: UIViewController {
     @objc func logOut() {
         do {
             try Auth.auth().signOut()
+            defaults.set(false, forKey: "UserIsLoggedIn")
             
             let loginController =  UINavigationController(rootViewController: LoginController())
             present(loginController, animated: true, completion: nil)

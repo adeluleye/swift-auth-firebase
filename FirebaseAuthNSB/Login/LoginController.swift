@@ -14,6 +14,8 @@ class LoginController: UIViewController {
     var loginView: LoginView!
     
     var darkMode = false
+    
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,7 @@ class LoginController: UIViewController {
                 print(err.localizedDescription)
             } else {
                 guard let uid = user?.user.uid else { return }
+                self.defaults.set(true, forKey: "UserIsLoggedIn")
                 print("User: \(uid) signed in!")
                 
                 // show main controller
