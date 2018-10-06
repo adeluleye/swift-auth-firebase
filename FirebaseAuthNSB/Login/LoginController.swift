@@ -51,6 +51,10 @@ class LoginController: UIViewController {
             } else {
                 guard let uid = user?.user.uid else { return }
                 print("User: \(uid) signed in!")
+                
+                // show main controller
+                let mainController = UINavigationController(rootViewController: MainController())
+                self.present(mainController, animated: true, completion: nil)
             }
         }
     }

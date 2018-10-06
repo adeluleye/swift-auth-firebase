@@ -22,6 +22,7 @@
 		E9BDFC6D2166C4BC00C51035 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */; };
 		E9BDFC6F2166C6EF00C51035 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */; };
 		E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */; };
+		E9E558222168DA0D001B21E2 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558212168DA0D001B21E2 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9E558212168DA0D001B21E2 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E95673D42166E61900D8D527 /* Extensions */,
 				E9BDFC652166B99A00C51035 /* Login */,
 				E95673CF2166C93400D8D527 /* SignUp */,
+				E9E558212168DA0D001B21E2 /* MainController.swift */,
 			);
 			path = FirebaseAuthNSB;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E9BDFC692166BEE100C51035 /* UIColor+Extension.swift in Sources */,
 				E9BDFC4E216659A200C51035 /* AppDelegate.swift in Sources */,
 				E95673D32166CA6400D8D527 /* SignUpView.swift in Sources */,
+				E9E558222168DA0D001B21E2 /* MainController.swift in Sources */,
 				E9BDFC6D2166C4BC00C51035 /* UIStackView+Extension.swift in Sources */,
 				E9BDFC6221665F9900C51035 /* Extensions.swift in Sources */,
 				E9BDFC6B2166C16500C51035 /* UIButton+Extension.swift in Sources */,
