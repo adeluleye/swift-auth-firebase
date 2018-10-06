@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainController: UIViewController {
     
@@ -16,5 +17,18 @@ class MainController: UIViewController {
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Your Name"
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logOut))
+    }
+    
+    @objc func logOut() {
+        do {
+            try Auth.auth().signOut()
+            
+            let loginController =  UINavigationController(rootViewController: LoginController())
+            present(loginController, animated: true, completion: nil)
+        } catch let err {
+            print(err.localizedDescription)
+        }
     }
 }
