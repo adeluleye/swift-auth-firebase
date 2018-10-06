@@ -10,7 +10,6 @@
 		248D2DE7FC1FB3CC59ECD7E3 /* Pods_FirebaseAuthNSB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA1198E232886897936333F /* Pods_FirebaseAuthNSB.framework */; };
 		E95673D12166C9CC00D8D527 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95673D02166C9CC00D8D527 /* SignUpController.swift */; };
 		E95673D32166CA6400D8D527 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95673D22166CA6400D8D527 /* SignUpView.swift */; };
-		E97F40472167CD2100C10F95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E97F40462167CD2100C10F95 /* GoogleService-Info.plist */; };
 		E9BDFC4E216659A200C51035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC4D216659A200C51035 /* AppDelegate.swift */; };
 		E9BDFC50216659A200C51035 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC4F216659A200C51035 /* LoginController.swift */; };
 		E9BDFC55216659A300C51035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BDFC54216659A300C51035 /* Assets.xcassets */; };
@@ -22,6 +21,7 @@
 		E9BDFC6B2166C16500C51035 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */; };
 		E9BDFC6D2166C4BC00C51035 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */; };
 		E9BDFC6F2166C6EF00C51035 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */; };
+		E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,6 @@
 		AB74BCF46C1DE0CCA0D310EC /* Pods-FirebaseAuthNSB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthNSB.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseAuthNSB/Pods-FirebaseAuthNSB.release.xcconfig"; sourceTree = "<group>"; };
 		E95673D02166C9CC00D8D527 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E95673D22166CA6400D8D527 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		E97F40462167CD2100C10F95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9BDFC4A216659A200C51035 /* FirebaseAuthNSB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthNSB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BDFC4D216659A200C51035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BDFC4F216659A200C51035 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 		E9BDFC632166B8ED00C51035 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E97F40462167CD2100C10F95 /* GoogleService-Info.plist */,
+				E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */,
 				E9BDFC59216659A300C51035 /* Info.plist */,
 				E9BDFC4D216659A200C51035 /* AppDelegate.swift */,
 				E9BDFC54216659A300C51035 /* Assets.xcassets */,
@@ -208,7 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BDFC58216659A300C51035 /* LaunchScreen.storyboard in Resources */,
-				E97F40472167CD2100C10F95 /* GoogleService-Info.plist in Resources */,
+				E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */,
 				E9BDFC55216659A300C51035 /* Assets.xcassets in Resources */,
 				E9BDFC6F2166C6EF00C51035 /* Default-568h@2x.png in Resources */,
 			);
