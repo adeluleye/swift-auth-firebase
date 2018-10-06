@@ -45,7 +45,7 @@ class SignUpController: UIViewController {
         FirebaseAPI.shared.signUp(name: name, email: email, password: password) { [weak self] (err) in
             if err != nil {
                 // error alert
-                print(err?.localizedDescription)
+                print(err?.localizedDescription ?? "Error occured")
             } else {
                 self?.dismiss(animated: true, completion: nil)
             }
