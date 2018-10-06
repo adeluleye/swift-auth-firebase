@@ -130,9 +130,9 @@
 				E95673D42166E61900D8D527 /* Extensions */,
 				E9BDFC652166B99A00C51035 /* Login */,
 				E95673CF2166C93400D8D527 /* SignUp */,
+				E9E5582B21693E60001B21E2 /* Main */,
 				E9E558232168E61A001B21E2 /* Models */,
 				E9E558262169158F001B21E2 /* Services */,
-				E9E558212168DA0D001B21E2 /* MainController.swift */,
 			);
 			path = FirebaseAuthNSB;
 			sourceTree = "<group>";
@@ -173,6 +173,14 @@
 				E9E558292169185A001B21E2 /* FirebaseAPI.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E9E5582B21693E60001B21E2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E9E558212168DA0D001B21E2 /* MainController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
