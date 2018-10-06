@@ -17,8 +17,12 @@ class SignUpController: UIViewController {
     
     var defaults = UserDefaults.standard
     
+    // get ref to user name in Database
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
         setupView()
     }
@@ -41,6 +45,11 @@ class SignUpController: UIViewController {
         // unwrap using guard statement because the values are optional
         guard let email = signUpView.emailTextField.text else { return }
         guard let password = signUpView.passwordTextField.text else { return }
+        guard let name = signUpView.nameTextField.text else { return }
+        
+        let userData: [String: Any] = [
+            "name": name
+        ]
         
         // implement user creation
         Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -50,6 +59,7 @@ class SignUpController: UIViewController {
             } else {
                 // uid is optional, therefore unwrap
                 guard let uid = result?.user.uid else { return }
+                self.ref.child("users/\(uid)").setValue(userData)
                 self.defaults.set(false, forKey: "UserIsLoggedIn")
                 print("User account created successfully", uid)
                 

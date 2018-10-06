@@ -23,6 +23,7 @@
 		E9BDFC6F2166C6EF00C51035 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */; };
 		E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */; };
 		E9E558222168DA0D001B21E2 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558212168DA0D001B21E2 /* MainController.swift */; };
+		E9E558252168E63E001B21E2 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558242168E63E001B21E2 /* AppUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9E558212168DA0D001B21E2 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		E9E558242168E63E001B21E2 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		E9BDFC4C216659A200C51035 /* FirebaseAuthNSB */ = {
 			isa = PBXGroup;
 			children = (
+				E9E558232168E61A001B21E2 /* Models */,
 				E9BDFC632166B8ED00C51035 /* Supporting Files */,
 				E95673D42166E61900D8D527 /* Extensions */,
 				E9BDFC652166B99A00C51035 /* Login */,
@@ -148,6 +151,14 @@
 				E9BDFC5F21665BFA00C51035 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E9E558232168E61A001B21E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9E558242168E63E001B21E2 /* AppUser.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				E9BDFC6021665BFA00C51035 /* LoginView.swift in Sources */,
 				E95673D12166C9CC00D8D527 /* SignUpController.swift in Sources */,
 				E9BDFC50216659A200C51035 /* LoginController.swift in Sources */,
+				E9E558252168E63E001B21E2 /* AppUser.swift in Sources */,
 				E9BDFC692166BEE100C51035 /* UIColor+Extension.swift in Sources */,
 				E9BDFC4E216659A200C51035 /* AppDelegate.swift in Sources */,
 				E95673D32166CA6400D8D527 /* SignUpView.swift in Sources */,
