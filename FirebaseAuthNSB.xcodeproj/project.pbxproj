@@ -21,11 +21,11 @@
 		E9BDFC6B2166C16500C51035 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */; };
 		E9BDFC6D2166C4BC00C51035 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */; };
 		E9BDFC6F2166C6EF00C51035 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */; };
-		E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */; };
 		E9E558222168DA0D001B21E2 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558212168DA0D001B21E2 /* MainController.swift */; };
 		E9E558252168E63E001B21E2 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558242168E63E001B21E2 /* AppUser.swift */; };
 		E9E5582821691627001B21E2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5582721691627001B21E2 /* UserDefaultsManager.swift */; };
 		E9E5582A2169185A001B21E2 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558292169185A001B21E2 /* FirebaseAPI.swift */; };
+		E9E5582F21693F60001B21E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E5582E21693F60001B21E2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,11 +47,11 @@
 		E9BDFC6A2166C16500C51035 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		E9BDFC6C2166C4BC00C51035 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E9BDFC6E2166C6EF00C51035 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9E558212168DA0D001B21E2 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		E9E558242168E63E001B21E2 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		E9E5582721691627001B21E2 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E9E558292169185A001B21E2 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
+		E9E5582E21693F60001B21E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 		E9BDFC632166B8ED00C51035 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */,
+				E9E5582E21693F60001B21E2 /* GoogleService-Info.plist */,
 				E9BDFC59216659A300C51035 /* Info.plist */,
 				E9BDFC4D216659A200C51035 /* AppDelegate.swift */,
 				E9BDFC54216659A300C51035 /* Assets.xcassets */,
@@ -244,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BDFC58216659A300C51035 /* LaunchScreen.storyboard in Resources */,
-				E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */,
+				E9E5582F21693F60001B21E2 /* GoogleService-Info.plist in Resources */,
 				E9BDFC55216659A300C51035 /* Assets.xcassets in Resources */,
 				E9BDFC6F2166C6EF00C51035 /* Default-568h@2x.png in Resources */,
 			);
