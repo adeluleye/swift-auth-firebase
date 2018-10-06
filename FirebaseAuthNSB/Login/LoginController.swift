@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -40,7 +41,18 @@ class LoginController: UIViewController {
     }
     
     func loginPressed() {
-        print("Login button pressed")
+        guard let email = loginView.emailTextField.text else { return }
+        guard let password = loginView.passwordTextField.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            
+            if let err = error {
+                print(err.localizedDescription)
+            } else {
+                guard let uid = user?.user.uid else { return }
+                print("User: \(uid) signed in!")
+            }
+        }
     }
     
     func signupPressed() {

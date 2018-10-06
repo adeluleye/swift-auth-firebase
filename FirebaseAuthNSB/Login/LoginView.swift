@@ -54,6 +54,7 @@ class LoginView: UIView {
     
     let passwordTextField: UITextField = {
         let textField = UITextField(placeHolder: "Password")
+        textField.isSecureTextEntry = true
         
         return textField
     }()
