@@ -24,6 +24,7 @@
 		E9E558202168D97B001B21E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */; };
 		E9E558222168DA0D001B21E2 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558212168DA0D001B21E2 /* MainController.swift */; };
 		E9E558252168E63E001B21E2 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E558242168E63E001B21E2 /* AppUser.swift */; };
+		E9E5582821691627001B21E2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5582721691627001B21E2 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E9E5581F2168D97B001B21E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9E558212168DA0D001B21E2 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		E9E558242168E63E001B21E2 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		E9E5582721691627001B21E2 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +124,12 @@
 		E9BDFC4C216659A200C51035 /* FirebaseAuthNSB */ = {
 			isa = PBXGroup;
 			children = (
-				E9E558232168E61A001B21E2 /* Models */,
 				E9BDFC632166B8ED00C51035 /* Supporting Files */,
 				E95673D42166E61900D8D527 /* Extensions */,
 				E9BDFC652166B99A00C51035 /* Login */,
 				E95673CF2166C93400D8D527 /* SignUp */,
+				E9E558232168E61A001B21E2 /* Models */,
+				E9E558262169158F001B21E2 /* Services */,
 				E9E558212168DA0D001B21E2 /* MainController.swift */,
 			);
 			path = FirebaseAuthNSB;
@@ -159,6 +162,14 @@
 				E9E558242168E63E001B21E2 /* AppUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E9E558262169158F001B21E2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E9E5582721691627001B21E2 /* UserDefaultsManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 				E9BDFC672166BA2100C51035 /* UITextField+Extension.swift in Sources */,
 				E9BDFC6021665BFA00C51035 /* LoginView.swift in Sources */,
 				E95673D12166C9CC00D8D527 /* SignUpController.swift in Sources */,
+				E9E5582821691627001B21E2 /* UserDefaultsManager.swift in Sources */,
 				E9BDFC50216659A200C51035 /* LoginController.swift in Sources */,
 				E9E558252168E63E001B21E2 /* AppUser.swift in Sources */,
 				E9BDFC692166BEE100C51035 /* UIColor+Extension.swift in Sources */,
