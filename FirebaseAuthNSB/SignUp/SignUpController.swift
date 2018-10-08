@@ -45,6 +45,8 @@ class SignUpController: UIViewController {
         self.signUpView.submitAction = submitPressed
         self.signUpView.cancelAction = cancelPressed
         
+        view.addGestureRecognizer(tap)
+        
         view.addSubview(scrollView)
         scrollView.addSubview(signUpView)
 
@@ -54,6 +56,10 @@ class SignUpController: UIViewController {
 
         signUpView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
         signUpView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func submitPressed() {
