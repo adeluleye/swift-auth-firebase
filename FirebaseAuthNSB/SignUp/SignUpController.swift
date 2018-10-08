@@ -38,6 +38,10 @@ class SignUpController: UIViewController {
         signUpView.emailTextField.delegate = self
         signUpView.passwordTextField.delegate = self
         signUpView.confirmPasswordTextField.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -69,6 +73,14 @@ class SignUpController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        print("Keyboard will show called")
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        print("Keyboard will hide called")
     }
     
     func submitPressed() {
