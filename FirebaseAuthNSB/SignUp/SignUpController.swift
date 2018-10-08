@@ -31,6 +31,15 @@ class SignUpController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        signUpView.nameTextField.delegate = self
+        signUpView.emailTextField.delegate = self
+        signUpView.passwordTextField.delegate = self
+        signUpView.confirmPasswordTextField.delegate = self
+    }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return darkMode ? .default : .lightContent
     }
@@ -83,5 +92,13 @@ class SignUpController: UIViewController {
     
     func cancelPressed() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SignUpController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
