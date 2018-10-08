@@ -30,14 +30,15 @@ class SignUpView: UIView {
                                                 submitButton,
                                                 cancelButton])
         
-        addSubview(backgroundImageView)
+        //addSubview(backgroundImageView)
         addSubview(stackView)
         
-        backgroundImageView.setAnchor(top: self.topAnchor, topPad: 0, bottom: self.bottomAnchor, bottomPad: 0, left: self.leftAnchor, leftPad: 0, right: self.rightAnchor, rightPad: 0, height: 0, width: 0)
+        //backgroundImageView.setAnchor(top: self.topAnchor, topPad: 0, bottom: self.bottomAnchor, bottomPad: 0, left: self.leftAnchor, leftPad: 0, right: self.rightAnchor, rightPad: 0, height: 0, width: 0)
         
         stackView.setAnchor(width: self.frame.width - 60, height: 310)
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
     }
     
     let backgroundImageView: UIImageView = {

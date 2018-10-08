@@ -17,13 +17,21 @@ class SignUpController: UIViewController {
     
     let scrollView: UIScrollView = {
         let sv = UIScrollView()
-        sv.translatesAutoresizingMaskIntoConstraints = false
         sv.alwaysBounceVertical = true
         sv.backgroundColor = .clear
         sv.bounces = false
         sv.showsVerticalScrollIndicator = false
         return sv
     }()
+    
+    let backgroundImageView: UIImageView = {
+        let image = UIImage(named: "Bitmap")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    var activeField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +67,8 @@ class SignUpController: UIViewController {
     
     func setupView() {
         
+        activeField = UITextField()
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         
         let signUpView = SignUpView(frame: self.view.frame)
@@ -69,11 +79,14 @@ class SignUpController: UIViewController {
         
         view.addGestureRecognizer(tap)
         
+        view.addSubview(backgroundImageView)
         view.addSubview(scrollView)
         scrollView.addSubview(signUpView)
-
+        
+        backgroundImageView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
+        
         scrollView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
-
+        
         signUpView.setAnchor(top: scrollView.topAnchor, topPad: 0, bottom: scrollView.bottomAnchor, bottomPad: 0, left: scrollView.leftAnchor, leftPad: 0, right: scrollView.rightAnchor, rightPad: 0, height: 0, width: 0)
 
         signUpView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
@@ -85,11 +98,24 @@ class SignUpController: UIViewController {
     }
     
     @objc func keyboardWillShow(notification: Notification) {
-        print("Keyboard will show called")
+        guard let keyBoardInfo = notification.userInfo else { return }
+        if let keyboardSize = (keyBoardInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size {
+            let keyboardHeight = keyboardSize.height + 10
+            let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+            scrollView.contentInset = contentInsets
+            var viewRect = view.frame
+            viewRect.size.height -= keyboardHeight
+            guard let activeField = activeField else { return }
+            if (!viewRect.contains(activeField.frame.origin)) {
+                let scrollPoint = CGPoint(x: 0, y: activeField.frame.origin.y - keyboardHeight)
+                scrollView.setContentOffset(scrollPoint, animated: true)
+            }
+        }
     }
     
     @objc func keyboardWillHide(notification: Notification) {
-        print("Keyboard will hide called")
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
     }
     
     func submitPressed() {
@@ -120,6 +146,7 @@ extension SignUpController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        activeField = nil
         return true
     }
 }
