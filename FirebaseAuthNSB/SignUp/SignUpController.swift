@@ -15,6 +15,16 @@ class SignUpController: UIViewController {
     
     var darkMode = false
     
+    let scrollView: UIScrollView = {
+        let sv = UIScrollView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.alwaysBounceVertical = true
+        sv.backgroundColor = .clear
+        sv.bounces = false
+        sv.showsVerticalScrollIndicator = false
+        return sv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,13 +36,24 @@ class SignUpController: UIViewController {
     }
     
     func setupView() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        
         let signUpView = SignUpView(frame: self.view.frame)
         self.signUpView = signUpView
         
         self.signUpView.submitAction = submitPressed
         self.signUpView.cancelAction = cancelPressed
         
-        self.view.addSubview(signUpView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(signUpView)
+
+        scrollView.setAnchor(top: view.topAnchor, topPad: 0, bottom: view.bottomAnchor, bottomPad: 0, left: view.leftAnchor, leftPad: 0, right: view.rightAnchor, rightPad: 0, height: 0, width: 0)
+
+        signUpView.setAnchor(top: scrollView.topAnchor, topPad: 0, bottom: scrollView.bottomAnchor, bottomPad: 0, left: scrollView.leftAnchor, leftPad: 0, right: scrollView.rightAnchor, rightPad: 0, height: 0, width: 0)
+
+        signUpView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
+        signUpView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
     }
     
     func submitPressed() {
